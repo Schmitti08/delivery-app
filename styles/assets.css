@@ -1,0 +1,64 @@
+:root {
+    --second-txt-color:  rgb(170, 170, 170);
+}
+
+.menu-link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+}
+
+.menu-link:hover {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 25px;
+    color: #ff6500;
+}
+
+.btn {
+    font-size: 12px;
+    background: orange;
+    padding: 8px;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    font-weight: 700;
+}
+
+.btn:hover {
+    cursor: pointer;
+    border: solid 0.5px rgb(120, 120, 120);
+}
+
+.td-txt {
+    width: 200px;
+}
+
+.td-sum {
+    width: 92px;
+}
+
+.txt-bold {
+    font-weight: bold;
+}
+
+.txt-color-sec {
+    color: var(--second-txt-color);
+}
+
+.flx {
+    display: flex;
+}
+
+.txt-price {
+    font-weight: 600;
+    color: orange;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+

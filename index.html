@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS-Styles -->
+    <link rel="stylesheet" href="./styles/assets.css">
+    <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+
+
+    <!-- JS-Scripte -->
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="./scripts/script.js"></script>
+
+    <title>Deine Bestellung</title>
+</head>
+
+<body onload="init()">
+    <header>
+        <img src="./assets/img/Logo.png" alt="Logo">
+        <nav>
+            <a class="menu-link" href="#">Bestellung</a>
+            <a class="menu-link" href="#">Fahrer*in werden</a>
+            <a class="menu-link" href="#">Partner werden</a>
+            <a class="menu-link" href="#">Anmelden</a>
+        </nav>
+    </header>
+
+    <main class="content_wrapper">
+        <section class="content" id="content">
+            <div class="content_header">
+                <h1>Pizza amore</h1>
+            </div>
+            <div class="menu_wrapper" id="menuWrapper">
+                <h2>Pizza</h2>
+            </div>
+        </section>
+
+        <section class="basket_wrapper" id="basketWrapper">
+            <div class="basket">
+                <div class="basket-header seperator">
+                    <h3>Warenkorb</h3>
+                </div>
+                <div class="basket-content seperator" id="basketContent">
+                </div>
+                <!-- <div class="basket-worth">
+                    <table>
+                        <tr>
+                            <td class="td-txt txt-color-sec">Zwischensumme:</td>
+                            <td class="td-sum txt-color-sec">Summe</td>
+                        </tr>
+                        <tr>
+                            <td class="td-txt txt-color-sec">Liefergebühr:</td>
+                            <td class="td-txt txt-color-sec">5,00</td>
+                        </tr>
+                        <tr>
+                            <td class="txt-bold">Gesamtkosten:</td>
+                            <td class="txt-bold">SUMME</td>
+                        </tr>
+                    </table>
+                 </div> -->
+                <div class="basket-worth">
+                    <div class="flx txt-color-sec">
+                        <p style="width: 165px;">Zwischensumme:</p>
+                        <p id="subtotal">0</p> €
+                    </div>
+                    <div class="flx txt-color-sec">
+                        <p style="width: 165px;">Liefergebühr:</p>
+                        <p>5,00</p>€
+                    </div>
+                    <div class="flx txt-bold">
+                        <p style="width: 165px;">Gesamtkosten:</p>
+                        <p id="total">0</p>€
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Hier steht mein Footer
+    </footer>
+
+</body>
+
+</html>

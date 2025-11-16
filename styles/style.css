@@ -1,0 +1,70 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    position: relative;
+    right: 0;
+    top: 0;
+    left: 0;
+    background-color: orange;
+    color: white;
+}
+
+header img{
+    width: 120px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+.content_wrapper{
+    height: 100vh;
+    display: flex;
+}
+
+.content {
+    width: calc(100% - 300px);
+    border: solid 1px black;
+    background-image: url(../assets/img/pizza-2589577.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.content_header {
+    background-color: white;
+    padding: 8px;
+    margin-bottom: 64px;
+}
+
+.menu_wrapper{
+    color: white;
+    padding: 8px;
+}
+
+.menu_card {
+    display: flex;
+    color: black;
+    background-color: white;
+    border: 1px solid red;
+    margin-bottom: 32px;
+    gap: 40px;
+    padding: 4px;
+    justify-content: space-between;
+}
+
+.menu_card_right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+
+footer {
+    height: 100px;
+}
+
