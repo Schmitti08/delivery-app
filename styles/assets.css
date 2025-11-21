@@ -27,11 +27,13 @@
     color: white;
     border: none;
     font-weight: 700;
+    width: 140px;
 }
 
 .btn:hover {
     cursor: pointer;
     border: solid 0.5px rgb(120, 120, 120);
+    width: 140px;
 }
 
 .td-txt {

@@ -36,6 +36,8 @@ function renderBasket() {
     if (!isItemInBasket) {
         basket.innerHTML = `<h4>Dein Warenkorb ist leer.</h4>
             <p>Klicke bei deine lieblings Pizza einfach auf "Hinzufügen"</p>`;
+        totalAmount = 0;
+        document.getElementById('total').innerHTML = totalAmount.toFixed(2);
     }
 }
 
