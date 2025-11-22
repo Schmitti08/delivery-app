@@ -52,7 +52,7 @@ let myDishes = [
     {
         "name": "Pizza Lönie (Vegan)",
         "price": 16.90,
-        "description": "veganer Mozzarella, vegane Salami, Gewürzgurken, Zwiebelen",
+        "description": "veganer Mozzarella, vegane Salami, Gewürzgurken, Zwiebeln",
         "amount": 0,
         "note": "",
         "sumPrice": function () {
