@@ -18,8 +18,10 @@
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./styles/style.css">
-    <!-- Favicon -->
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <!-- Favicon/Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <!-- JS-Scripte -->
@@ -33,12 +35,23 @@
 <body onload="init()">
     <header>
         <img src="./assets/img/Logo.png" alt="Logo">
-        <nav>
+        <nav class="myLinks" id="myLinks">
             <a class="menu-link" href="#">Bestellung</a>
             <a class="menu-link" href="#">Fahrer*in werden</a>
             <a class="menu-link" href="#">Partner werden</a>
             <a class="menu-link" href="#">Anmelden</a>
         </nav>
+
+        <div id="mobileNav" class="mobile-nav">
+            <a class="menu-link" href="#">Bestellung</a>
+            <a class="menu-link" href="#">Fahrer*in werden</a>
+            <a class="menu-link" href="#">Partner werden</a>
+            <a class="menu-link" href="#">Anmelden</a>
+        </div>
+
+        <a href="javascript:void(0);" class="icon burger-menu" onclick="showMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
     </header>
 
     <main class="content_wrapper">
@@ -92,8 +105,23 @@
         </section>
     </main>
 
+    <section onclick="openRespBasket()" class="basket_responsive" id="basketResponsive">
+        <div class="basket_wrapper_responsive">
+            <div onclick="preventBubbling(event)" class="basket-content-responsive d-none"
+                id="basketContentResponsive-overlay">
+                <div id="basketContentResponsive">
+                </div>
+            </div>
+            <div class="basketRes" id="headline-basket-resp">
+            </div>
+        </div>
+
+    </section>
+
     <footer>
-        Hier steht mein Footer
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
     </footer>
 
 </body>

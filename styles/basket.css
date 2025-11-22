@@ -1,8 +1,8 @@
 .basket_wrapper {
     width: 300px;
     flex-grow: 1;
-    border: solid 1px red;
     padding: 8px;
+    padding-top: 0px;
     background-color: orange;
 }
 
@@ -30,8 +30,8 @@
     min-height: 400px;
     position: sticky;
     top: 0;
-    border: solid 1px green;
     background-color: white;
+    box-shadow: 0px 0px 7px 1px #000000;
 }
 
 .item-details {

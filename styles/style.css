@@ -1,3 +1,12 @@
+:root {
+    --second-txt-color: rgb(170, 170, 170);
+}
+
+body {
+    background-color: orange;
+    height: 100%;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -9,9 +18,11 @@ header {
     left: 0;
     background-color: orange;
     color: white;
+    margin-bottom: 8px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 10px 5px rgba(0, 0, 0, 0);
 }
 
-header img{
+header img {
     width: 120px;
 }
 
@@ -20,17 +31,31 @@ nav {
     gap: 25px;
 }
 
-.content_wrapper{
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: orange;
+    padding: 20px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+
+}
+
+.burger-menu {
+    display: none;
+}
+
+.content_wrapper {
     display: flex;
 }
 
 .content {
     width: calc(100% - 300px);
-    border: solid 1px black;
     background-image: url(../assets/img/pizza-2589577.jpg);
     background-size: cover;
     background-position: center;
-
 }
 
 .content_header {
@@ -39,7 +64,7 @@ nav {
     margin-bottom: 64px;
 }
 
-.menu_wrapper{
+.menu_wrapper {
     color: white;
     padding: 8px;
 }
@@ -48,22 +73,50 @@ nav {
     display: flex;
     color: black;
     background-color: white;
-    border: 1px solid red;
     margin-bottom: 32px;
     gap: 40px;
     padding: 4px;
     justify-content: space-between;
 }
 
-.menu_card_right{
+.menu_card_right {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-
-
-footer {
-    height: 100px;
+.basket_responsive {
+    display: none;
 }
 
+footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    gap: 24px;
+    font-size: 12px;
+    justify-content: end;
+    background-color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: black;
+}
+
+main {
+    margin-bottom: 8px;
+    padding: 8px;
+    flex: 1;
+    display: flex;
+}

@@ -26,3 +26,29 @@ function basketTemplate(i) {
                  </div>
     `;
 }
+
+function basketAmount () {
+    return `
+                 <div class="basket-worth">
+                    <div class="flx txt-color-sec">
+                        <p style="width: 165px;">Zwischensumme:</p>
+                        <p> ${subtotal.toFixed(2)}</p> €
+                    </div>
+                    <div class="flx txt-color-sec">
+                        <p style="width: 165px;">Liefergebühr:</p>
+                        <p>5,00</p> €
+                    </div>
+                    <div class="flx txt-bold">
+                        <p style="width: 165px;">Gesamtkosten:</p>
+                        <p> ${totalAmount.toFixed(2)}</p> €
+                    </div>
+                </div>
+    `;
+}
+
+function showNameResponsiveBasket() {
+    return `
+        <h3">Warenkorb ${totalAmount.toFixed(2)} €</h3>
+    `
+}
+

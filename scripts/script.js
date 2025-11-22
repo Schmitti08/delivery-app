@@ -5,14 +5,15 @@ let totalAmount = 0;
 function init() {
     let menu = document.getElementById('menuWrapper');
     menu.innerHTML = "";
+    let responsiveBaskset = document.getElementById('headline-basket-resp');
+    responsiveBaskset.innerHTML = showNameResponsiveBasket();
 
     for (let i = 0; i < myDishes.length; i++) {
         menu.innerHTML += menuCardTemplate(i);
     }
 
     renderBasket();
-    console.log(myDishes);
-
+    renderResponsiveBasket();
 }
 
 function addToBasket(i) {
@@ -35,10 +36,32 @@ function renderBasket() {
     }
     if (!isItemInBasket) {
         basket.innerHTML = `<h4>Dein Warenkorb ist leer.</h4>
-            <p>Klicke bei deine lieblings Pizza einfach auf "Hinzufügen"</p>`;
+            <p>Klicke bei deiner Lieblingspizza einfach auf "Hinzufügen"</p>`;
         totalAmount = 0;
         document.getElementById('total').innerHTML = totalAmount.toFixed(2);
     }
+}
+
+function renderResponsiveBasket() {
+    let basket = document.getElementById('basketContentResponsive');
+    basket.innerHTML = "";
+
+    let isItemInBasket = false;
+
+    for (let i = 0; i < myDishes.length; i++) {
+        if (myDishes[i].amount > 0) {
+            isItemInBasket = true;
+            basket.innerHTML += basketTemplate(i);
+        }
+    }
+    if (!isItemInBasket) {
+        basket.innerHTML = `<h4>Dein Warenkorb ist leer.</h4>
+            <p>Klicke bei deiner Lieblingspizza einfach auf "Hinzufügen"</p>`;
+        totalAmount = 0;
+        document.getElementById('total').innerHTML = totalAmount.toFixed(2);
+        return;
+    }
+    basket.innerHTML += basketAmount();
 }
 
 function removeOneItem(i) {
@@ -77,4 +100,18 @@ function finalSum() {
     init();
 }
 
+function openRespBasket() {
+    document.getElementById('basketResponsive').classList.toggle('overlay');
+    document.getElementById('basketContentResponsive-overlay').classList.toggle('d-none')
+    renderResponsiveBasket();
 
+}
+
+function preventBubbling(event) {
+    event.stopPropagation();
+}
+
+function showMenu() {
+    let nav = document.getElementById("mobileNav");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+} 
