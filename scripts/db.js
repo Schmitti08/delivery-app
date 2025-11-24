@@ -1,4 +1,4 @@
-let myDishes = [
+const myDishes = [
     {
         "name": "Pizza Margherita",
         "price": 11.90,

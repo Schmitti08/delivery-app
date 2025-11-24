@@ -1,0 +1,14 @@
+1. Limitierter Content über die Breite - erledigt
+
+2. Kategorien einfügen (3x)
+
+3. Bestellung anpassen entfernen - erledigt
+
+4. Responisve anpassen fürs Handy (button laufen raus) - erledigt
+
+5. Bestellbutton im Warenkorb (Dialog und reseten)
+
+6. const anpassen - erledigt
+
+7. Javascript Funktionen kürzen - erledigt 
+

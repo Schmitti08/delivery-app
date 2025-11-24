@@ -4,7 +4,9 @@
 
 body {
     background-color: orange;
-    height: 100%;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
 }
 
 header {
@@ -66,7 +68,7 @@ nav {
 
 .menu_wrapper {
     color: white;
-    padding: 8px;
+    padding: 8px;  
 }
 
 .menu_card {
@@ -77,6 +79,8 @@ nav {
     gap: 40px;
     padding: 4px;
     justify-content: space-between;
+    width: 75%;
+    min-width: 190px;
 }
 
 .menu_card_right {
@@ -90,7 +94,6 @@ nav {
 }
 
 footer {
-
     display: flex;
     align-items: center;
     padding: 16px;
@@ -119,4 +122,12 @@ main {
     padding: 8px;
     flex: 1;
     display: flex;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 2000px;
 }

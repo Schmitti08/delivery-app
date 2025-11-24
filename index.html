@@ -33,45 +33,46 @@
 </head>
 
 <body onload="init()">
-    <header>
-        <img src="./assets/img/Logo.png" alt="Logo">
-        <nav class="myLinks" id="myLinks">
-            <a class="menu-link" href="#">Bestellung</a>
-            <a class="menu-link" href="#">Fahrer*in werden</a>
-            <a class="menu-link" href="#">Partner werden</a>
-            <a class="menu-link" href="#">Anmelden</a>
-        </nav>
+    <div class="page-wrapper">
+        <header>
+            <img src="./assets/img/Logo.png" alt="Logo">
+            <nav class="myLinks" id="myLinks">
+                <a onclick="alertEdit()" class="menu-link" href="#">Bestellung</a>
+                <a onclick="alertEdit()" class="menu-link" href="#">Fahrer*in werden</a>
+                <a onclick="alertEdit()" class="menu-link" href="#">Partner werden</a>
+                <a onclick="alertEdit()" class="menu-link" href="#">Anmelden</a>
+            </nav>
 
-        <div id="mobileNav" class="mobile-nav">
-            <a class="menu-link" href="#">Bestellung</a>
-            <a class="menu-link" href="#">Fahrer*in werden</a>
-            <a class="menu-link" href="#">Partner werden</a>
-            <a class="menu-link" href="#">Anmelden</a>
-        </div>
-
-        <a href="javascript:void(0);" class="icon burger-menu" onclick="showMenu()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </header>
-
-    <main class="content_wrapper">
-        <section class="content" id="content">
-            <div class="content_header">
-                <h1>Pizza amore</h1>
+            <div id="mobileNav" class="mobile-nav">
+                <a onclick="alertEdit()" class="menu-link" href="#">Bestellung</a>
+                <a onclick="alertEdit()" class="menu-link" href="#">Fahrer*in werden</a>
+                <a onclick="alertEdit()" class="menu-link" href="#">Partner werden</a>
+                <a onclick="alertEdit()" class="menu-link" href="#">Anmelden</a>
             </div>
-            <div class="menu_wrapper" id="menuWrapper">
-                <h2>Pizza</h2>
-            </div>
-        </section>
 
-        <section class="basket_wrapper" id="basketWrapper">
-            <div class="basket">
-                <div class="basket-header seperator">
-                    <h3>Warenkorb</h3>
+            <a href="javascript:void(0);" class="icon burger-menu" onclick="showMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </header>
+
+        <main class="content_wrapper">
+            <section class="content" id="content">
+                <div class="content_header">
+                    <h1>Pizza amore</h1>
                 </div>
-                <div class="basket-content seperator" id="basketContent">
+                <div class="menu_wrapper" id="menuWrapper">
+                    <h2>Pizza</h2>
                 </div>
-                <!-- <div class="basket-worth">
+            </section>
+
+            <section class="basket_wrapper" id="basketWrapper">
+                <div class="basket">
+                    <div class="basket-header seperator">
+                        <h3>Warenkorb</h3>
+                    </div>
+                    <div class="basket-content seperator" id="basketContent">
+                    </div>
+                    <!-- <div class="basket-worth">
                     <table>
                         <tr>
                             <td class="td-txt txt-color-sec">Zwischensumme:</td>
@@ -87,43 +88,45 @@
                         </tr>
                     </table>
                  </div> -->
-                <div class="basket-worth">
-                    <div class="flx txt-color-sec">
-                        <p style="width: 165px;">Zwischensumme:</p>
-                        <p id="subtotal">0,00</p> €
+                    <div class="basket-worth">
+                        <div class="flx txt-color-sec">
+                            <p style="width: 165px;">Zwischensumme:</p>
+                            <p id="subtotal">0,00</p> €
+                        </div>
+                        <div class="flx txt-color-sec">
+                            <p style="width: 165px;">Liefergebühr:</p>
+                            <p>5,00</p> €
+                        </div>
+                        <div class="flx txt-bold">
+                            <p style="width: 165px;">Gesamtkosten:</p>
+                            <p id="total">0,00</p> €
+                        </div>
+                        <div class="order">
+                            <button id="orderBtn" class="order-btn" onclick="sendOrder()">Bestellen</button>
+                        </div>
                     </div>
-                    <div class="flx txt-color-sec">
-                        <p style="width: 165px;">Liefergebühr:</p>
-                        <p>5,00</p> €
+                </div>
+            </section>
+        </main>
+
+        <section onclick="openRespBasket()" class="basket_responsive" id="basketResponsive">
+            <div class="basket_wrapper_responsive">
+                <div onclick="preventBubbling(event)" class="basket-content-responsive d-none"
+                    id="basketContentResponsive-overlay">
+                    <div id="basketContentResponsive">
                     </div>
-                    <div class="flx txt-bold">
-                        <p style="width: 165px;">Gesamtkosten:</p>
-                        <p id="total">0,00</p> €
-                    </div>
+                </div>
+                <div class="basketRes" id="headline-basket-resp">
                 </div>
             </div>
         </section>
-    </main>
 
-    <section onclick="openRespBasket()" class="basket_responsive" id="basketResponsive">
-        <div class="basket_wrapper_responsive">
-            <div onclick="preventBubbling(event)" class="basket-content-responsive d-none"
-                id="basketContentResponsive-overlay">
-                <div id="basketContentResponsive">
-                </div>
-            </div>
-            <div class="basketRes" id="headline-basket-resp">
-            </div>
-        </div>
-
-    </section>
-
-    <footer>
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
-        <a href="#">AGB</a>
-    </footer>
-
+        <footer>
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+            <a href="#">AGB</a>
+        </footer>
+    </div>
 </body>
 
 </html>

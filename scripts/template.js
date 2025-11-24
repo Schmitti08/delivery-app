@@ -7,7 +7,6 @@ function menuCardTemplate(i) {
                     </div>
                     <div class="menu_card_right">
                         <button onclick = "addToBasket(${i})" class="btn">Hinzufügen</button>
-                        <button class="btn">Bestellung anpassen</button>
                     </div>
                 </section>`;
 }
@@ -27,6 +26,20 @@ function basketTemplate(i) {
     `;
 }
 
+function responsiveItem(i) {
+        return `    <section class="menu_card" id="menuCard">
+                    <div>
+                        <h3>${myDishes[i].name}</h3>
+                        <p class = "txt-color-sec">${myDishes[i].description}</p>
+                        <p class = "txt-price">${parseFloat(myDishes[i].price).toFixed(2)} €</p>
+                    </div>
+                    <div class="menu_card_right">
+                        <button onclick = "addToBasket(${i})" class="btn-count">+</button>
+                    </div>
+                </section>`;
+}
+
+
 function basketAmount () {
     return `
                  <div class="basket-worth">
@@ -43,6 +56,9 @@ function basketAmount () {
                         <p> ${totalAmount.toFixed(2)}</p> €
                     </div>
                 </div>
+                <div class="order">
+                        <button id="orderBtn" class="order-btn" onclick="sendOrder()">Bestellen</button>
+                </div>
     `;
 }
 
@@ -51,4 +67,5 @@ function showNameResponsiveBasket() {
         <h3">Warenkorb ${totalAmount.toFixed(2)} €</h3>
     `
 }
+
 
