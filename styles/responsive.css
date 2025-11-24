@@ -40,6 +40,7 @@
         padding: 8px;
         box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
+
     }
 
     .basketRes {
@@ -75,6 +76,8 @@
         min-height: 400px;
         background-color: white;
         margin-bottom: 8px;
+        max-height: 500px;
+        overflow: overlay;
     }
 
     .basket_wrapper_responsive {

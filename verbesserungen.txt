@@ -6,7 +6,7 @@
 
 4. Responisve anpassen fürs Handy (button laufen raus) - erledigt
 
-5. Bestellbutton im Warenkorb (Dialog und reseten)
+5. Bestellbutton im Warenkorb (Dialog und reseten) - erledigt
 
 6. const anpassen - erledigt
 

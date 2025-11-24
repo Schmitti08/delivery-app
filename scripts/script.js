@@ -1,5 +1,6 @@
 let subtotal = 0;
 let totalAmount = 0;
+let currentCategory = 'pizza';
 
 
 function init() {
@@ -9,26 +10,23 @@ function init() {
     showRespBasketMenu();
 }
 
-window.addEventListener("resize", renderMenu);
+
 
 function renderMenu() {
     let menu = document.getElementById('menuWrapper');
     menu.innerHTML = "";
-    renderItemsResp(menu);
-}
 
-function renderItemsResp(menu) {
     const isMobile = window.matchMedia("(max-width: 450px)").matches;
-    let item = "";
+    const filteredItems = myDishes.filter(dish => dish.category === currentCategory);
 
-    for (let i = 0; i < myDishes.length; i++) {
+    filteredItems.forEach((dish, i) => {
+        const realIndex = myDishes.indexOf(dish);
         if (isMobile) {
-            item += responsiveItem(i);
+            menu.innerHTML += responsiveItem(dish, realIndex);
         } else {
-            item += menuCardTemplate(i);
+            menu.innerHTML += menuCardTemplate(dish, realIndex);
         }
-    }
-    menu.innerHTML = item;
+    });
 }
 
 function showRespBasketMenu() {
@@ -60,7 +58,6 @@ function renderBasket() {
         emptyBasket(basket);
     }
 }
-
 
 function renderResponsiveBasket() {
     let basket = document.getElementById('basketContentResponsive');
@@ -156,6 +153,15 @@ function sendOrder() {
     }
 }
 
-function alertEdit () {
+function alertEdit() {
     alert("Die Seite befindet sich im Aufbau.")
 }
+
+function filterCategory(category) {
+    currentCategory = category; 
+    renderMenu();              
+}
+
+window.addEventListener('resize', () => {
+    renderMenu();
+});

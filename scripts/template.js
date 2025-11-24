@@ -1,14 +1,15 @@
-function menuCardTemplate(i) {
-    return `    <section class="menu_card" id="menuCard">
-                    <div>
-                        <h3>${myDishes[i].name}</h3>
-                        <p class = "txt-color-sec">${myDishes[i].description}</p>
-                        <p class = "txt-price">${parseFloat(myDishes[i].price).toFixed(2)} €</p>
-                    </div>
-                    <div class="menu_card_right">
-                        <button onclick = "addToBasket(${i})" class="btn">Hinzufügen</button>
-                    </div>
-                </section>`;
+function menuCardTemplate(dish, index) {
+    return `
+    <section class="menu_card">
+        <div>
+            <h3>${dish.name}</h3>
+            <p class="txt-color-sec">${dish.description}</p>
+            <p class="txt-price">${dish.price.toFixed(2)} €</p>
+        </div>
+        <div class="menu_card_right">
+            <button onclick="addToBasket(${index})" class="btn">Hinzufügen</button>
+        </div>
+    </section>`;
 }
 
 function basketTemplate(i) {
@@ -26,21 +27,22 @@ function basketTemplate(i) {
     `;
 }
 
-function responsiveItem(i) {
-        return `    <section class="menu_card" id="menuCard">
-                    <div>
-                        <h3>${myDishes[i].name}</h3>
-                        <p class = "txt-color-sec">${myDishes[i].description}</p>
-                        <p class = "txt-price">${parseFloat(myDishes[i].price).toFixed(2)} €</p>
-                    </div>
-                    <div class="menu_card_right">
-                        <button onclick = "addToBasket(${i})" class="btn-count">+</button>
-                    </div>
-                </section>`;
+function responsiveItem(dish, index) {
+    return `
+    <section class="menu_card">
+        <div>
+            <h3>${dish.name}</h3>
+            <p class="txt-color-sec">${dish.description}</p>
+            <p class="txt-price">${dish.price.toFixed(2)} €</p>
+        </div>
+        <div class="menu_card_right">
+            <button onclick="addToBasket(${index})" class="btn-count">+</button>
+        </div>
+    </section>`;
 }
 
 
-function basketAmount () {
+function basketAmount() {
     return `
                  <div class="basket-worth">
                     <div class="flx txt-color-sec">
