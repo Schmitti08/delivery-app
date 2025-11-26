@@ -96,3 +96,10 @@
         align-items: center;
     }
 }
+
+@media (max-width:374px) {
+    .content_header {
+        font-size: 8px;
+        gap: 12px;
+    }
+}

@@ -42,8 +42,8 @@ function addToBasket(i) {
     showRespBasketMenu();
 }
 
-function renderBasket() {
-    let basket = document.getElementById('basketContent');
+function renderAnyBasket(id) {
+    let basket = document.getElementById(id);
     basket.innerHTML = "";
 
     let isItemInBasket = false;
@@ -59,22 +59,12 @@ function renderBasket() {
     }
 }
 
+function renderBasket() {
+    renderAnyBasket('basketContent')
+}
+
 function renderResponsiveBasket() {
-    let basket = document.getElementById('basketContentResponsive');
-    basket.innerHTML = "";
-
-    let isItemInBasket = false;
-
-    for (let i = 0; i < myDishes.length; i++) {
-        if (myDishes[i].amount > 0) {
-            isItemInBasket = true;
-            basket.innerHTML += basketTemplate(i);
-        }
-    }
-    if (!isItemInBasket) {
-        emptyBasket(basket);
-    }
-    basket.innerHTML += basketAmount();
+    renderAnyBasket('basketContentResponsive');
 }
 
 function emptyBasket(basket) {
@@ -158,8 +148,8 @@ function alertEdit() {
 }
 
 function filterCategory(category) {
-    currentCategory = category; 
-    renderMenu();              
+    currentCategory = category;
+    renderMenu();
 }
 
 window.addEventListener('resize', () => {
